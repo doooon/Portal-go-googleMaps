@@ -10,6 +10,7 @@ javascript:
   )(document);
 
 javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js";d.getElementsByTagName("head")[0].appendChild(s);})(document);
+javascript:(function(d){var s=d.createElement("script");s.src="file:///Users/sakodon/Documents/%20gitHub/gitHub%20doooon/Portal-go-googleMaps/docs/portalGoGmaps.js";d.getElementsByTagName("head")[0].appendChild(s);})(document);
 
 
 ################################### 
@@ -26,7 +27,7 @@ function PortalDetail(){
   return Hj
 }
 
-function ptdl2(){
+function PortalDetail2(){
   return PortalDetail().c.latLng
 }
 
@@ -63,11 +64,12 @@ try {
   if(detail==false || ok == false){ 
     latlng=GetCookie("ingress.intelmap.lat=",";")+","+GetCookie("ingress.intelmap.lng=",";"); 
   }else{ 
-    latlng=ptdl2().lat+","+ptdl2().lng; 
+    latlng=PortalDetail2().lat+","+PortalDetail2().lng; 
   } 
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://?q="+latlng; 
   } else { 
-    location.href="http://maps.google.com/?q="+latlng; 
+    //location.href="http://maps.google.com/?q="+latlng; 
+    location.href=Hj.map.mapUrl;
   } 
 } 
