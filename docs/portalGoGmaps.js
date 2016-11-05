@@ -12,10 +12,10 @@ http://maps.google.com/?daddr=31.595286,130.553541+(testtest)&ie=UTF8
 (function () {
 
   var portalWindow = document.getElementById("portal_info_windows");
-  console.log("portalWindow: "portalWindow);
+  console.log("portalWindow: "+portalWindow);
   if (portalWindow==null) {
     var cookieStr = document.cookie;
-   console.log("cookieStr: "cookieStr);   
+   console.log("cookieStr: "+cookieStr);   
   }
 
 try {
