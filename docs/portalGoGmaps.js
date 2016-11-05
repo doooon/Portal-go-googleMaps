@@ -15,7 +15,10 @@ http://maps.google.com/?daddr=31.595286,130.553541+(testtest)&ie=UTF8
   console.log("portalWindow: "+portalWindow);
   if (portalWindow==null) {
     var cookies = document.cookie.split(/;/);
-   console.log("cookies: "+cookies);   
+    for (var i in cookies) {
+      cookies[i]
+      console.log("cookies["+i+"]: "+cookies[i]);   
+    }
   }
 
 try {
