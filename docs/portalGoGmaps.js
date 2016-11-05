@@ -24,23 +24,17 @@ directionsmode:移動手段です。 driving、transit、bicycling、walking
 
 
 (function () {
-var latlng=""; 
-var ok=true; 
-var detail=false; 
-var portalName=""; 
 
 try {
-  latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
+  var latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://?q="+latlng; 
   } else { 
     location.href="http://maps.google.com/?q="+latlng; 
   } 
-  portalName = document.getElementById("portal_primary_title").innerText; 
+  var portalName = document.getElementById("portal_primary_title").innerText; 
   
 } catch(e) { 
-  ok=false;
-  
 } finally { 
 } 
 })(document)
