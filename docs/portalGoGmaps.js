@@ -30,23 +30,17 @@ var detail=false;
 var portalName=""; 
 
 try {
-  if ( Hj == undefined ){ 
-    detail=false; 
-  } else { 
-    detail=true; 
-    portalName = document.getElementById("portal_primary_title").innerText; 
-  } 
-  ok=true; 
-  
-} catch(e) { 
-  ok=false;
-  
-} finally { 
   latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://?q="+latlng; 
   } else { 
     location.href="http://maps.google.com/?q="+latlng; 
   } 
+  portalName = document.getElementById("portal_primary_title").innerText; 
+  
+} catch(e) { 
+  ok=false;
+  
+} finally { 
 } 
 })(document)
