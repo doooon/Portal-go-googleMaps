@@ -13,7 +13,6 @@ javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.gi
 
 try {
   if (portalWindow==null) {
-    var str="";
     var lat="";
     var lng="";
     var cookies = document.cookie.split(/;/);
@@ -24,23 +23,32 @@ try {
       if (cookies[i][0].match("ingress.intelmap.lng")) lng=cookies[i][1];
     }
     latlng=lat+","+lng;
-    str="ll="+latlng;
     console.log(latlng);
+    
+    if (navigator.userAgent.match(/iPhone|iPad/i)) { 
+      console.log("comgooglemaps://?center="+latlng);    
+      location.href="comgooglemaps://?center="+latlng;
+    } else { 
+      console.log("http://maps.google.com/?ll="+latlng);    
+      location.href="http://maps.google.com/?ll="+latlng;
+    } 
+
   } else {
+    
     latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
-    str="q="+latlng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
     console.log(latlng);    
+    
+    if (navigator.userAgent.match(/iPhone|iPad/i)) { 
+      console.log("comgooglemaps://?q="+latlng);    
+      location.href="comgooglemaps://?q="+latlng;
+    } else { 
+      console.log("http://maps.google.com/?q="+latlng);    
+      location.href="http://maps.google.com/?q="+latlng;
+    } 
+
   }
   
-  if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-    location.href="comgooglemaps://"+str;
-    console.log(location.href="comgooglemaps://"+str);    
-  } else { 
-    location.href="http://maps.google.com/?"+str;
-    console.log(location.href="http://maps.google.com/?"+str);    
-  } 
-
 } catch(e) { 
   console.log("no portal data");
 } finally { 
