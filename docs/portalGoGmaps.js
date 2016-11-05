@@ -43,6 +43,7 @@ function GetCookie(cookieName,separeter){
   return cookieStr; 
 }
 
+(function () {
 var latlng=""; 
 var ok=true; 
 var detail=false; 
@@ -73,3 +74,4 @@ try {
     location.href=Hj.map.mapUrl;
   } 
 } 
+})(document)
