@@ -22,9 +22,6 @@ directionsmode:移動手段です。 driving、transit、bicycling、walking
 */
 
 
-function PortalDetail(){
-  return Hj.c.latLng
-}
 
 (function () {
 var latlng=""; 
@@ -33,7 +30,7 @@ var detail=false;
 var portalName=""; 
 
 try {
-  if ( PortalDetail() == undefined ){ 
+  if ( Hj == undefined ){ 
     detail=false; 
   } else { 
     detail=true; 
@@ -45,7 +42,7 @@ try {
   ok=false;
   
 } finally { 
-  latlng=PortalDetail().lat+","+PortalDetail().lng; 
+  latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://?q="+latlng; 
   } else { 
