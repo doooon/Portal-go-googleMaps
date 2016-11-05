@@ -28,7 +28,7 @@ function PortalDetail(){
 }
 
 function PortalDetail2(){
-  return PortalDetail().c.latLng
+  return Hj.c.latLng
 }
 
 function GetCookie(cookieName,separeter){ 
@@ -50,7 +50,7 @@ var detail=false;
 var portalName=""; 
 
 try {
-  if ( PortalDetail() == undefined || PortalDetail().getMap() ==null ){ 
+  if ( PortalDetail2() == undefined ){ 
     detail=false; 
   } else { 
     detail=true; 
