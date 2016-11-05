@@ -70,8 +70,7 @@ try {
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://?q="+latlng; 
   } else { 
-    //location.href="http://maps.google.com/?q="+latlng; 
-    location.href=Hj.map.mapUrl;
+    location.href="http://maps.google.com/?q="+latlng; 
   } 
 } 
 })(document)
