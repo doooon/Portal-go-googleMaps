@@ -12,10 +12,12 @@ http://maps.google.com/?daddr=31.595286,130.553541+(testtest)&ie=UTF8
 (function () {
 
   var portalWindow = document.getElementById("portal_info_windows");
+  console.log(portalWindow);
+
+try {
   var latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
   var portalName = document.getElementById("portal_primary_title").innerText; 
 
-try {
   // var str=encodeURIComponent(portalName);
   console.log(latlng);
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
