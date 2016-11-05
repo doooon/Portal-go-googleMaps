@@ -15,7 +15,7 @@ try {
   var latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
   // var portalName = document.getElementById("portal_primary_title").innerText; 
   // var str=encodeURIComponent(portalName);
-  console.log(str);
+  console.log(latlng);
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://q="+latlng; 
   } else { 
