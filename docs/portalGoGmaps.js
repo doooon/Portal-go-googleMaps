@@ -35,6 +35,7 @@ try {
   var portalName = document.getElementById("portal_primary_title").innerText; 
   
 } catch(e) { 
+  console.log("no portal data");
 } finally { 
 } 
 })(document)
