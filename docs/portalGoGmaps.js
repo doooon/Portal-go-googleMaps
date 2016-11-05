@@ -10,29 +10,41 @@ http://maps.google.com/?daddr=31.595286,130.553541+(testtest)&ie=UTF8
 
 
 (function () {
-
+  
+  var latlng="";
   var portalWindow = document.getElementById("portal_info_windows");
   console.log("portalWindow: "+portalWindow);
+  console.log("document.cookie: "+document.cookie);
+
+try {
   if (portalWindow==null) {
+    var lat="";
+    var lng="";
     var cookies = document.cookie.split(/;/);
     for (var i in cookies) {
       cookies[i]=cookies[i].split(/=/);
-      console.log(cookies[i][0]+": "+cookies[i][1]);   
+      //console.log(cookies[i][0]+": "+cookies[i][1]);
+      if (cookies[i][0].match("ingress.intelmap.lat")) lat=cookies[i][1];
+      if (cookies[i][0].match("ingress.intelmap.lng")) lng=cookies[i][1];
     }
+    latlng=lat+","+lng;
+    console.log(latlng);
+
+  } else {
+
+    latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
+    var portalName = document.getElementById("portal_primary_title").innerText; 
+  
+    // var str=encodeURIComponent(portalName);
+    console.log(latlng);    
   }
-
-try {
-  var latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
-  var portalName = document.getElementById("portal_primary_title").innerText; 
-
-  // var str=encodeURIComponent(portalName);
-  console.log(latlng);
+  
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://q="+latlng; 
   } else { 
     location.href="http://maps.google.com/?q="+latlng;
   } 
-  
+
 } catch(e) { 
   console.log("no portal data");
 } finally { 
