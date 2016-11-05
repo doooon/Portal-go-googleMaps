@@ -29,6 +29,7 @@ try {
   var latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
   var portalName = document.getElementById("portal_primary_title").innerText; 
   var str=latlng+"+("+portalName+")&iwloc=A";
+  console.log(str);
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://?q="+str; 
   } else { 
