@@ -12,7 +12,7 @@ try {
   var str=latlng+"+("+portalName+")&iwloc=A";
   console.log(str);
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-    location.href="comgooglemaps://?q="+str; 
+    location.href="comgooglemaps://?q="str; 
   } else { 
     //location.href="http://maps.google.com/?q="+str;
     window.open("http://maps.google.com/?q="+str,"_blank");
