@@ -34,9 +34,11 @@ try {
   }
   
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-    location.href="comgooglemaps://?"+str; 
+    location.href="comgooglemaps://"+str;
+    console.log(location.href="comgooglemaps://"+str);    
   } else { 
     location.href="http://maps.google.com/?"+str;
+    console.log(location.href="http://maps.google.com/?"+str);    
   } 
 
 } catch(e) { 
