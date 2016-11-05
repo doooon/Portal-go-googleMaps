@@ -12,7 +12,11 @@ http://maps.google.com/?daddr=31.595286,130.553541+(testtest)&ie=UTF8
 (function () {
 
   var portalWindow = document.getElementById("portal_info_windows");
-  console.log(portalWindow);
+  console.log("portalWindow: "portalWindow);
+  if (portalWindow==null) {
+    var cookieStr = document.cookie;
+   console.log("cookieStr: "cookieStr);   
+  }
 
 try {
   var latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
