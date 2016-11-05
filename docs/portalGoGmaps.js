@@ -13,6 +13,7 @@ javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.gi
 
 try {
   if (portalWindow==null) {
+    var str="";
     var lat="";
     var lng="";
     var cookies = document.cookie.split(/;/);
@@ -23,17 +24,19 @@ try {
       if (cookies[i][0].match("ingress.intelmap.lng")) lng=cookies[i][1];
     }
     latlng=lat+","+lng;
+    str="ll="+latlng;
     console.log(latlng);
   } else {
-    latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
+    latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
+    str="q="+latlng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
     console.log(latlng);    
   }
   
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-    location.href="comgooglemaps://q="+latlng; 
+    location.href="comgooglemaps://?"+str; 
   } else { 
-    location.href="http://maps.google.com/?q="+latlng;
+    location.href="http://maps.google.com/?"+str;
   } 
 
 } catch(e) { 
