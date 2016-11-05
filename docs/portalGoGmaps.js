@@ -17,7 +17,7 @@ http://maps.google.com/?daddr=31.595286,130.553541+(testtest)&ie=UTF8
     var cookies = document.cookie.split(/;/);
     for (var i in cookies) {
       cookies[i]=cookies[i].split(/=/);
-      console.log("cookies["+i+"][0]: "+cookies[i][1]);   
+      console.log(cookies[i][0]+": "+cookies[i][1]);   
     }
   }
 
