@@ -10,12 +10,12 @@ try {
   var latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
   var portalName = document.getElementById("portal_primary_title").innerText; 
   //var str=latlng+"("+portalName+")&iwloc=A";
-  var str=portalName+"@"+latlng;
+  var str=encodeURIComponent(portalName)+"@"+latlng;
   console.log(str);
   if (navigator.userAgent.match(/iPhone|iPad/i)) { 
     location.href="comgooglemaps://?q="+str; 
   } else { 
-    location.href="http://maps.google.com/?q="+str;
+    //location.href="http://maps.google.com/?q="+str;
   } 
   
 } catch(e) { 
