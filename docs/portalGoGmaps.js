@@ -27,12 +27,13 @@ directionsmode:移動手段です。 driving、transit、bicycling、walking
 
 try {
   var latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng; 
-  if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-    location.href="comgooglemaps://?q="+latlng; 
-  } else { 
-    location.href="http://maps.google.com/?q="+latlng; 
-  } 
   var portalName = document.getElementById("portal_primary_title").innerText; 
+  var str=latlng+"+("+portalName+")&iwloc=A";
+  if (navigator.userAgent.match(/iPhone|iPad/i)) { 
+    location.href="comgooglemaps://?q="+str; 
+  } else { 
+    location.href="http://maps.google.com/?q="+str;
+  } 
   
 } catch(e) { 
   console.log("no portal data");
