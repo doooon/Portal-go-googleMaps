@@ -26,9 +26,9 @@ try {
   var lat=Hj.c.latLng.lat;
   var lng=Hj.c.latLng.lng;
   var portalName = document.getElementById("portal_primary_title").innerText; 
-} 
-if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-  location.href="comgooglemaps://?q="+latlng; 
-} else { 
-  location.href="http://maps.google.com/?q="+latlng; 
+  if (navigator.userAgent.match(/iPhone|iPad/i)) { 
+    location.href="comgooglemaps://?q="+latlng; 
+  } else { 
+    location.href="http://maps.google.com/?q="+latlng; 
+  } 
 } 
