@@ -11,13 +11,19 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
   var portalWindow = document.getElementById("portal_info_windows");
   console.log("portalWindow: "+portalWindow);
   console.log("document.cookie: "+document.cookie);
+  alert("portalWindow: "+portalWindow);
+  alert("document.cookie: "+document.cookie);
 
 try {
+  
   if (portalWindow==null) {
+    
     console.log("no portal_info_windows");
+    alert("no portal_info_windows");
     var lat="";
     var lng="";
     var cookies = document.cookie.split(/;/);
+    
     for (var i in cookies) {
       cookies[i]=cookies[i].split(/=/);
       //console.log(cookies[i][0]+": "+cookies[i][1]);
@@ -26,6 +32,7 @@ try {
     }
     latlng=lat+","+lng;
     console.log("latlng: "+latlng);
+    alert("latlng: "+latlng);
     
     if (
       navigator.userAgent.match(/iPhone|iPad/i) && 
@@ -33,21 +40,24 @@ try {
     ) { 
       console.log("comgooglemaps://?center="+latlng);    
       alert("comgooglemaps://?center="+latlng);    
-      alert(navigator.userAgent);    
-      alert(navigator.appVersion);    
       location.href="comgooglemaps://?center="+latlng;
     } else { 
       console.log("http://maps.google.com/?ll="+latlng);    
       alert("http://maps.google.com/?ll="+latlng);    
       location.href="http://maps.google.com/?ll="+latlng;
     } 
+    alert(navigator.userAgent);    
+    alert(navigator.appVersion);    
+
 
   } else {
     
     console.log("get portal_info_windows");
+    alert("get portal_info_windows");
     latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
     console.log("latlng: "+latlng);
+    alert("latlng: "+latlng);
     
     location.href="http://maps.google.com/?q="+latlng;
 
