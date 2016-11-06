@@ -1,5 +1,6 @@
 /* 
 javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js";d.getElementsByTagName("head")[0].appendChild(s);})(document);
+https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
 */
 
 
@@ -48,6 +49,8 @@ try {
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
     console.log("latlng: "+latlng);
     
+    location.href="http://maps.google.com/?q="+latlng;
+
     if (
       navigator.userAgent.match(/iPhone|iPad/i) && 
       !navigator.userAgent.match(/Mercury/i)
