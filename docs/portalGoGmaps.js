@@ -24,6 +24,7 @@ try {
     console.log("document.cookie: "+document.cookie);
     alert("document.cookie: "+document.cookie);
     
+    
     /*
     for (var i in cookies) {
       cookies[i]=cookies[i].split(/=/);
