@@ -31,9 +31,11 @@ try {
       !navigator.userAgent.match(/Mercury/i)
     ) { 
       console.log("comgooglemaps://?center="+latlng);    
+      alert("comgooglemaps://?center="+latlng);    
       location.href="comgooglemaps://?center="+latlng;
     } else { 
       console.log("http://maps.google.com/?ll="+latlng);    
+      alert("http://maps.google.com/?ll="+latlng);    
       location.href="http://maps.google.com/?ll="+latlng;
     } 
 
@@ -49,9 +51,11 @@ try {
       !navigator.userAgent.match(/Mercury/i)
     ) { 
       console.log("comgooglemaps://?q="+latlng);
+      alert("comgooglemaps://?q="+latlng);
       location.href="comgooglemaps://?q="+latlng;
     } else { 
       console.log("http://maps.google.com/?q="+latlng);    
+      alert("http://maps.google.com/?q="+latlng);    
       location.href="http://maps.google.com/?q="+latlng;
     } 
 
