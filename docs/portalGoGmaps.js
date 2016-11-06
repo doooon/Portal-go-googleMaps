@@ -12,14 +12,11 @@ javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.gi
   console.log("document.cookie: "+document.cookie);
 
 try {
-  alert("try in");
-  alert(portalWindow);
   if (portalWindow==null) {
-    alert("portalWindow==null");
+    console.log("no portal_info_windows");
     var lat="";
     var lng="";
     var cookies = document.cookie.split(/;/);
-    alert(document.cookie);
     for (var i in cookies) {
       cookies[i]=cookies[i].split(/=/);
       //console.log(cookies[i][0]+": "+cookies[i][1]);
@@ -27,40 +24,34 @@ try {
       if (cookies[i][0].match("ingress.intelmap.lng")) lng=cookies[i][1];
     }
     latlng=lat+","+lng;
-    console.log(latlng);
-    alert(latlng);
+    console.log("latlng: "+latlng);
     
     if (
-      navigator.userAgent.match(/iPhone|iPad/i)&&
+      navigator.userAgent.match(/iPhone|iPad/i) && 
       !navigator.userAgent.match(/Mercury/i)
     ) { 
       console.log("comgooglemaps://?center="+latlng);    
-      alert("comgooglemaps://?center="+latlng);
-location.href="comgooglemaps://?center="+latlng;
+      location.href="comgooglemaps://?center="+latlng;
     } else { 
       console.log("http://maps.google.com/?ll="+latlng);    
-      alert("http://maps.google.com/?ll="+latlng);
       location.href="http://maps.google.com/?ll="+latlng;
     } 
 
   } else {
     
-    alert("portalWindow!=null");
+    console.log("get portal_info_windows");
     latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
-    console.log(latlng);
-    alert(latlng);
+    console.log("latlng: "+latlng);
     
     if (
-      navigator.userAgent.match(/iPhone|iPad/i)&&
+      navigator.userAgent.match(/iPhone|iPad/i) && 
       !navigator.userAgent.match(/Mercury/i)
     ) { 
       console.log("comgooglemaps://?q="+latlng);
-      alert("comgooglemaps://?q="+latlng);
       location.href="comgooglemaps://?q="+latlng;
     } else { 
       console.log("http://maps.google.com/?q="+latlng);    
-      alert("http://maps.google.com/?q="+latlng);    
       location.href="http://maps.google.com/?q="+latlng;
     } 
 
