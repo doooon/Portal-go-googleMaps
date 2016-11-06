@@ -12,7 +12,7 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
   var portalWindow = document.getElementById("portal_info_windows");
   console.log("portalWindow: "+portalWindow);
   // googleMapマークから現在地を取得
-  var url_default=document.getElementById("map_canvas").getElementsByTagName("a")[0];
+  var url_default=document.getElementById("map_canvas").getElementsByTagName("a")[0].getAttributeNode("href");
   console.log(url_iOS);    
   // https://maps.google.com/maps?ll=31.598416,130.568321&z=19&t=m&hl=ja-JP&gl=US&mapclient=apiv3
   var url_iOS=url_default.replace(/https?:\/\/maps\.google\.com\/maps\?ll=/i, "comgooglemaps://?center=");
