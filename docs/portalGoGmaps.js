@@ -26,7 +26,7 @@ try {
     latlng=lat+","+lng;
     console.log("latlng: "+latlng);
     console.log("http://maps.google.com/?ll="+latlng);      
-    open.window("http://maps.google.com/?ll="+latlng);
+    window.open("http://maps.google.com/?ll="+latlng);
     //location.href="http://maps.google.com/?ll="+latlng;
 
   } else {
@@ -38,7 +38,7 @@ try {
     
     console.log("http://maps.google.com/?q="+latlng);    
 
-    open.window("http://maps.google.com/?q="+latlng);
+    window.open("http://maps.google.com/?q="+latlng);
     //location.href="http://maps.google.com/?q="+latlng;
 
   }
