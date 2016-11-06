@@ -13,7 +13,7 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
   console.log("document.cookie: "+document.cookie);
   alert("portalWindow: "+portalWindow);
   alert("document.cookie: "+document.cookie);
-/*
+
 try {
   
   if (portalWindow==null) {
@@ -33,7 +33,7 @@ try {
     latlng=lat+","+lng;
     console.log("latlng: "+latlng);
     alert("latlng: "+latlng);
-    
+    /*
     if (
       navigator.userAgent.match(/iPhone|iPad/i) && 
       !navigator.userAgent.match(/Mercury/i)
@@ -48,7 +48,7 @@ try {
     } 
     alert(navigator.userAgent);    
     alert(navigator.appVersion);    
-
+    */
 
   } else {
     
@@ -60,7 +60,7 @@ try {
     alert("latlng: "+latlng);
     
     location.href="http://maps.google.com/?q="+latlng;
-
+    /*
     if (
       navigator.userAgent.match(/iPhone|iPad/i) && 
       !navigator.userAgent.match(/Mercury/i)
@@ -73,7 +73,7 @@ try {
       alert("http://maps.google.com/?q="+latlng);    
       location.href="http://maps.google.com/?q="+latlng;
     } 
-
+    */
   }
   
 } catch(e) { 
@@ -81,6 +81,6 @@ try {
   console.log("no portal data");
 } finally { 
 }
-*/
+
 
 })(document)
