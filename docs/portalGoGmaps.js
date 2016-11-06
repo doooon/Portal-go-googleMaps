@@ -1,12 +1,15 @@
 /* 
 javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js";d.getElementsByTagName("head")[0].appendChild(s);})(document);
 https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
+
 */
 
 
 
 (function () {
   
+  alert(document.getElementById("map_canvas").getElementsByTagName("a")[0].getAttributeNode("src")); 
+
   var latlng="";
   var portalWindow = document.getElementById("portal_info_windows");
   console.log("portalWindow: "+portalWindow);
