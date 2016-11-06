@@ -5,6 +5,7 @@ javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.gi
 
 
 (function () {
+  alert("running");
   
   var latlng="";
   var portalWindow = document.getElementById("portal_info_windows");
