@@ -11,35 +11,26 @@ iOSブラウザ Mercury Browser 用 （MercuryはURL schemeが効かない。さ
   var latlng="";
   var portalWindow = document.getElementById("portal_info_windows");
   console.log("portalWindow: "+portalWindow);
+  // googleMapマークから現在地を取得
+  var url_default=document.getElementById("map_canvas").getElementsByTagName("a")[0].getAttributeNode("href").value;
+  console.log(url_default);    
 
 try {
   
   if (portalWindow==null) {
     
     console.log("no portal_info_windows");
-    var lat="";
-    var lng="";
-    var cookies = document.cookie.split(/;/);
-    console.log("document.cookie: "+document.cookie);
     
-    
-    for (var i in cookies) {
-      
-      cookies[i]=cookies[i].split(/=/);
-      //console.log(cookies[i][0]+": "+cookies[i][1]);
-      if (cookies[i][0].match("ingress.intelmap.lat")) lat=cookies[i][1];
-      if (cookies[i][0].match("ingress.intelmap.lng")) lng=cookies[i][1];
-      
-    }
-    latlng=lat+","+lng;
-    console.log("latlng: "+latlng);
-  
-    console.log("http://maps.google.com/?ll="+latlng);    
-    location.href="http://maps.google.com/?ll="+latlng;
-    
+    console.log(url_default);    
+    location.href=url_default;
+
   } else {
     
     console.log("get portal_info_windows");
+    
+    var lat="";
+    var lng="";
+
     latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
     console.log("latlng: "+latlng);
@@ -50,7 +41,7 @@ try {
   }
   
 } catch(e) { 
-  alert("error: "+e);
+  
   console.log("no portal data");
 } finally { 
 }

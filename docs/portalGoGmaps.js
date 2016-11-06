@@ -13,9 +13,9 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
   console.log("portalWindow: "+portalWindow);
   // googleMapマークから現在地を取得
   var url_default=document.getElementById("map_canvas").getElementsByTagName("a")[0].getAttributeNode("href").value;
-  console.log(url_iOS);    
-  // https://maps.google.com/maps?ll=31.598416,130.568321&z=19&t=m&hl=ja-JP&gl=US&mapclient=apiv3
   var url_iOS=url_default.replace(/https?:\/\/maps\.google\.com\/maps\?ll=/i, "comgooglemaps://?center=");
+  console.log(url_default);    
+  console.log(url_iOS);    
 
 try {
   
