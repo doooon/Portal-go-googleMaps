@@ -16,7 +16,7 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
   console.log(url_iOS);    
   // https://maps.google.com/maps?ll=31.598416,130.568321&z=19&t=m&hl=ja-JP&gl=US&mapclient=apiv3
   var url_iOS=url_default;
-  url_iOS.replace(/https:\/\/maps\.google\.com\/maps\?ll=/i, "comgooglemaps:\/\/?center=");
+  //var url_iOS=url_default.replace(/https:\/\/maps\.google\.com\/maps\?ll=/i, "comgooglemaps:\/\/?center=");
 
 try {
   
