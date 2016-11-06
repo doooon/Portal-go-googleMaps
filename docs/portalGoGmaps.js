@@ -24,6 +24,7 @@ try {
     console.log("document.cookie: "+document.cookie);
     alert("document.cookie: "+document.cookie);
     
+    /*
     for (var i in cookies) {
       cookies[i]=cookies[i].split(/=/);
       //console.log(cookies[i][0]+": "+cookies[i][1]);
@@ -33,7 +34,7 @@ try {
     latlng=lat+","+lng;
     console.log("latlng: "+latlng);
     alert("latlng: "+latlng);
-    /*
+
     if (
       navigator.userAgent.match(/iPhone|iPad/i) && 
       !navigator.userAgent.match(/Mercury/i)
