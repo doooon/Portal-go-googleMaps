@@ -12,6 +12,7 @@ javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.gi
   console.log("document.cookie: "+document.cookie);
 
 try {
+  alert("try in");
   if (portalWindow==null) {
     //alert("portalWindow==null");
     var lat="";
