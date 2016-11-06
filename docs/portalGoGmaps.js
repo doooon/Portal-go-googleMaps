@@ -8,6 +8,9 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
 
 (function () {
   
+  alert(document.getElementById("map_canvas")); 
+  alert(document.getElementById("map_canvas").getElementsByTagName("a")); 
+  alert(document.getElementById("map_canvas").getElementsByTagName("a")[0]); 
   alert(document.getElementById("map_canvas").getElementsByTagName("a")[0].getAttributeNode("src")); 
 
   var latlng="";
