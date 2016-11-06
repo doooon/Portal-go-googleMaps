@@ -39,11 +39,8 @@ try {
     console.log("latlng: "+latlng);
     alert("latlng: "+latlng);
 
-    /*
-    if (
-      navigator.userAgent.match(/iPhone|iPad/i) && 
-      !navigator.userAgent.match(/Mercury/i)
-    ) { 
+    
+    if (navigator.userAgent.match(/iPhone|iPad/i)) { 
       console.log("comgooglemaps://?center="+latlng);    
       alert("comgooglemaps://?center="+latlng);    
       location.href="comgooglemaps://?center="+latlng;
@@ -52,7 +49,7 @@ try {
       alert("http://maps.google.com/?ll="+latlng);    
       location.href="http://maps.google.com/?ll="+latlng;
     } 
-    */
+    
 
   } else {
     
@@ -63,12 +60,9 @@ try {
     console.log("latlng: "+latlng);
     alert("latlng: "+latlng);
     
-    /*
+    
     location.href="http://maps.google.com/?q="+latlng;
-    if (
-      navigator.userAgent.match(/iPhone|iPad/i) && 
-      !navigator.userAgent.match(/Mercury/i)
-    ) { 
+    if (navigator.userAgent.match(/iPhone|iPad/i)) { 
       console.log("comgooglemaps://?q="+latlng);
       alert("comgooglemaps://?q="+latlng);
       location.href="comgooglemaps://?q="+latlng;
@@ -77,7 +71,7 @@ try {
       alert("http://maps.google.com/?q="+latlng);    
       location.href="http://maps.google.com/?q="+latlng;
     } 
-    */
+    
   }
   
 } catch(e) { 
