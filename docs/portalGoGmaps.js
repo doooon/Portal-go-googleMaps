@@ -27,10 +27,10 @@ try {
     // https://maps.google.com/maps?ll=31.598416,130.568321&z=19&t=m&hl=ja-JP&gl=US&mapclient=apiv3
     
     if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-      console.log("url_iOS);    
+      console.log(url_iOS);    
       location.href=url_iOS;
     } else { 
-      console.log("url);    
+      console.log(url);    
       location.href=url;
     }
 
