@@ -13,7 +13,7 @@ javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.gi
 
 try {
   if (portalWindow==null) {
-    alert("portalWindow==null");
+    //alert("portalWindow==null");
     var lat="";
     var lng="";
     var cookies = document.cookie.split(/;/);
@@ -36,7 +36,7 @@ try {
 
   } else {
     
-    alert("portalWindow!=null");
+    //alert("portalWindow!=null");
     latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
     console.log(latlng);    
