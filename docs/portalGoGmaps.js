@@ -33,6 +33,7 @@ try {
       console.log("comgooglemaps://?center="+latlng);    
       alert("comgooglemaps://?center="+latlng);    
       alert(navigator.userAgent);    
+      alert(navigator.appVersion);    
       location.href="comgooglemaps://?center="+latlng;
     } else { 
       console.log("http://maps.google.com/?ll="+latlng);    
