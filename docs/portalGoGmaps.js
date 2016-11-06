@@ -11,6 +11,8 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
   var portalWindow = document.getElementById("portal_info_windows");
   console.log("portalWindow: "+portalWindow);
   alert("portalWindow: "+portalWindow);
+  alert(navigator.userAgent);    
+  alert(navigator.appVersion);    
 
 try {
   
@@ -50,8 +52,6 @@ try {
       alert("http://maps.google.com/?ll="+latlng);    
       location.href="http://maps.google.com/?ll="+latlng;
     } 
-    alert(navigator.userAgent);    
-    alert(navigator.appVersion);    
     */
 
   } else {
