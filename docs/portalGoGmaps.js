@@ -52,6 +52,7 @@ try {
   }
   
 } catch(e) { 
+  alert("error: "+e);
   console.log("no portal data");
 } finally { 
 } 
