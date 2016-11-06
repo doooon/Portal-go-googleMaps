@@ -30,7 +30,10 @@ try {
     console.log(latlng);
     alert(latlng);
     
-    if (navigator.userAgent.match(/iPhone|iPad/i)) { 
+    if (
+      navigator.userAgent.match(/iPhone|iPad/i)&&
+      !navigator.userAgent.match(/Mercury/i)
+    ) { 
       console.log("comgooglemaps://?center="+latlng);    
       alert("comgooglemaps://?center="+latlng);
 location.href="comgooglemaps://?center="+latlng;
@@ -48,7 +51,10 @@ location.href="comgooglemaps://?center="+latlng;
     console.log(latlng);
     alert(latlng);
     
-    if (navigator.userAgent.match(/iPhone|iPad/i)) { 
+    if (
+      navigator.userAgent.match(/iPhone|iPad/i)&&
+      !navigator.userAgent.match(/Mercury/i)
+    ) { 
       console.log("comgooglemaps://?q="+latlng);
       alert("comgooglemaps://?q="+latlng);
       location.href="comgooglemaps://?q="+latlng;
