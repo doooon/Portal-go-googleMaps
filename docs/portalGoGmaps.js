@@ -26,12 +26,12 @@ try {
     
     
     for (var i in cookies) {
-      /*
+      
       cookies[i]=cookies[i].split(/=/);
       //console.log(cookies[i][0]+": "+cookies[i][1]);
       if (cookies[i][0].match("ingress.intelmap.lat")) lat=cookies[i][1];
       if (cookies[i][0].match("ingress.intelmap.lng")) lng=cookies[i][1];
-      */
+      
     }
     latlng=lat+","+lng;
     console.log("latlng: "+latlng);
