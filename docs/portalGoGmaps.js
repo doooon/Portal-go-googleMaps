@@ -19,6 +19,7 @@ try {
     var lat="";
     var lng="";
     var cookies = document.cookie.split(/;/);
+    alert(document.cookie);
     for (var i in cookies) {
       cookies[i]=cookies[i].split(/=/);
       //console.log(cookies[i][0]+": "+cookies[i][1]);
@@ -39,6 +40,7 @@ try {
   } else {
     
     alert("portalWindow!=null");
+    alert(Hj.c.latLng.lat+","+Hj.c.latLng.lng);
     latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
     console.log(latlng);    
