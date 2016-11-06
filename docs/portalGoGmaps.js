@@ -13,7 +13,7 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
   console.log("document.cookie: "+document.cookie);
   alert("portalWindow: "+portalWindow);
   alert("document.cookie: "+document.cookie);
-
+/*
 try {
   
   if (portalWindow==null) {
@@ -80,5 +80,7 @@ try {
   alert("error: "+e);
   console.log("no portal data");
 } finally { 
-} 
+}
+*/
+
 })(document)
