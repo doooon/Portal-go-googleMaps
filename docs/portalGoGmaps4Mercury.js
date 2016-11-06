@@ -1,6 +1,7 @@
 /* 
-javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js";d.getElementsByTagName("head")[0].appendChild(s);})(document);
-https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
+javascript:(function(d){var s=d.createElement("script");s.src="https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps4Mercury.js";d.getElementsByTagName("head")[0].appendChild(s);})(document);
+https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps4Mercury.js
+iOSブラウザ Mercury Browser 用 （MercuryはURL schemeが効かない。さらにUserAgentがSafariと一緒で認識できない。）
 */
 
 
@@ -19,7 +20,8 @@ try {
     var lat="";
     var lng="";
     var cookies = document.cookie.split(/;/);
-    console.log("document.cookie: "+document.cookie);    
+    console.log("document.cookie: "+document.cookie);
+    
     
     for (var i in cookies) {
       
@@ -31,41 +33,24 @@ try {
     }
     latlng=lat+","+lng;
     console.log("latlng: "+latlng);
+  
+    console.log("http://maps.google.com/?ll="+latlng);    
+    location.href="http://maps.google.com/?ll="+latlng;
     
-    if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-      console.log("comgooglemaps://?center="+latlng);    
-      
-      location.href="comgooglemaps://?center="+latlng;
-    } else { 
-      console.log("http://maps.google.com/?ll="+latlng);    
-      
-      location.href="http://maps.google.com/?ll="+latlng;
-    } 
-
   } else {
     
     console.log("get portal_info_windows");
-    
     latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
     console.log("latlng: "+latlng);
     
+    console.log("http://maps.google.com/?q="+latlng);    
     location.href="http://maps.google.com/?q="+latlng;
-    if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-      console.log("comgooglemaps://?q="+latlng);
-      
-      location.href="comgooglemaps://?q="+latlng;
-      location.href="http://maps.google.com/?q="+latlng;
-    } else { 
-      console.log("http://maps.google.com/?q="+latlng);    
-      
-      location.href="http://maps.google.com/?q="+latlng;
-    } 
     
   }
   
 } catch(e) { 
-  
+  alert("error: "+e);
   console.log("no portal data");
 } finally { 
 }
