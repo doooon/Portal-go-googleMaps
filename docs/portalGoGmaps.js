@@ -10,9 +10,7 @@ https://doooon.github.io/Portal-go-googleMaps/portalGoGmaps.js
   var latlng="";
   var portalWindow = document.getElementById("portal_info_windows");
   console.log("portalWindow: "+portalWindow);
-  console.log("document.cookie: "+document.cookie);
   alert("portalWindow: "+portalWindow);
-  alert("document.cookie: "+document.cookie);
 
 try {
   
@@ -23,6 +21,8 @@ try {
     var lat="";
     var lng="";
     var cookies = document.cookie.split(/;/);
+    console.log("document.cookie: "+document.cookie);
+    alert("document.cookie: "+document.cookie);
     
     for (var i in cookies) {
       cookies[i]=cookies[i].split(/=/);
