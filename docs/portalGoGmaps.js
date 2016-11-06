@@ -28,28 +28,33 @@ try {
     }
     latlng=lat+","+lng;
     console.log(latlng);
+    alert(latlng);
     
     if (navigator.userAgent.match(/iPhone|iPad/i)) { 
       console.log("comgooglemaps://?center="+latlng);    
-      location.href="comgooglemaps://?center="+latlng;
+      alert("comgooglemaps://?center="+latlng);
+location.href="comgooglemaps://?center="+latlng;
     } else { 
       console.log("http://maps.google.com/?ll="+latlng);    
+      alert("http://maps.google.com/?ll="+latlng);
       location.href="http://maps.google.com/?ll="+latlng;
     } 
 
   } else {
     
     alert("portalWindow!=null");
-    alert(Hj.c.latLng.lat+","+Hj.c.latLng.lng);
     latlng=Hj.c.latLng.lat+","+Hj.c.latLng.lng;
     // var portalName = encodeURIComponent(document.getElementById("portal_primary_title").innerText);
-    console.log(latlng);    
+    console.log(latlng);
+    alert(latlng);
     
     if (navigator.userAgent.match(/iPhone|iPad/i)) { 
-      console.log("comgooglemaps://?q="+latlng);    
+      console.log("comgooglemaps://?q="+latlng);
+      alert("comgooglemaps://?q="+latlng);
       location.href="comgooglemaps://?q="+latlng;
     } else { 
       console.log("http://maps.google.com/?q="+latlng);    
+      alert("http://maps.google.com/?q="+latlng);    
       location.href="http://maps.google.com/?q="+latlng;
     } 
 
