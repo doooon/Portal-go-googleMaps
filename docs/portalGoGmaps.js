@@ -59,8 +59,8 @@ try {
     console.log("latlng: "+latlng);
     alert("latlng: "+latlng);
     
-    location.href="http://maps.google.com/?q="+latlng;
     /*
+    location.href="http://maps.google.com/?q="+latlng;
     if (
       navigator.userAgent.match(/iPhone|iPad/i) && 
       !navigator.userAgent.match(/Mercury/i)
